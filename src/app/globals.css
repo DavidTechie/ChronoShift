@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  :root {
+    /* Light Theme - Based on user request */
+    --background: 210 0% 94%; /* Light Gray (#f0f0f0) */
+    --foreground: 180 100% 15%; /* Darker Teal for text */
+    --card: 0 0% 100%;
+    --card-foreground: 180 100% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 180 100% 15%;
+    --primary: 180 100% 25%; /* Dark Teal (#008080) */
+    --primary-foreground: 0 0% 100%; /* White text on primary */
+    --secondary: 210 0% 94%; /* Light Gray (#f0f0f0) */
+    --secondary-foreground: 180 100% 15%; /* Dark Teal text on secondary */
+    --muted: 210 0% 88%; /* Slightly darker gray for muted */
+    --muted-foreground: 180 50% 35%; /* Muted teal text */
+    --accent: 16 100% 66%; /* Coral (#FF7F50) */
+    --accent-foreground: 0 0% 100%; /* White text on accent */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 210 0% 85%; /* Slightly darker border */
+    --input: 210 0% 85%; /* Input border */
+    --ring: 180 100% 25%; /* Dark Teal for focus rings */
+    --chart-1: 180 100% 25%;
+    --chart-2: 16 100% 66%;
+    --chart-3: 190 80% 40%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+    --sidebar-background: 210 0% 94%;
+    --sidebar-foreground: 180 100% 15%;
+    --sidebar-primary: 180 100% 25%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 16 100% 66%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 210 0% 85%;
+    --sidebar-ring: 180 100% 25%;
+  }
+
+  .dark {
+    /* Dark Theme - Provide a contrasting dark mode */
+    --background: 180 15% 10%; /* Very dark teal/gray */
+    --foreground: 0 0% 98%; /* Light text */
+    --card: 180 15% 12%; /* Slightly lighter dark card */
+    --card-foreground: 0 0% 98%;
+    --popover: 180 15% 10%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 180 80% 45%; /* Brighter Teal for dark mode */
+    --primary-foreground: 0 0% 10%; /* Dark text on primary */
+    --secondary: 180 10% 15%; /* Dark secondary */
+    --secondary-foreground: 0 0% 98%; /* Light text on secondary */
+    --muted: 180 10% 20%; /* Dark muted */
+    --muted-foreground: 0 0% 60%; /* Lighter muted text */
+    --accent: 16 100% 70%; /* Slightly brighter Coral */
+    --accent-foreground: 0 0% 10%; /* Dark text on accent */
+    --destructive: 0 62.8% 50.6%; /* Adjusted destructive */
+    --destructive-foreground: 0 0% 98%;
+    --border: 180 10% 25%; /* Dark border */
+    --input: 180 10% 25%; /* Dark input border */
+    --ring: 180 80% 45%; /* Brighter Teal ring */
+    --chart-1: 180 80% 45%;
+    --chart-2: 16 100% 70%;
+    --chart-3: 190 70% 50%;
+    --chart-4: 43 74% 70%;
+    --chart-5: 27 87% 70%;
+    --radius: 0.5rem;
+    --sidebar-background: 180 15% 10%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 180 80% 45%;
+    --sidebar-primary-foreground: 0 0% 10%;
+    --sidebar-accent: 16 100% 70%;
+    --sidebar-accent-foreground: 0 0% 10%;
+    --sidebar-border: 180 10% 25%;
+    --sidebar-ring: 180 80% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
